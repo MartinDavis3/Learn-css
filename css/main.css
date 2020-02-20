@@ -20,7 +20,14 @@ nav ul li{
 }
 
 nav ul li a{
-    text-decoration: none
+    text-decoration: none;  /* Disable the underline */
+    display: inline-block;
+    padding: 16px 32px;
+}
+
+nav ul li a:hover, nav ul li a:focus, nav ul li a:active{
+    background-color: rgb(50,50,50);
+    color:#fff;  /* this is actually &Hffffff. If only three characters are given, the other 3 are assumed to be the same */
 }
 
 article{

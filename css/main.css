@@ -3,6 +3,26 @@ h1{
     text-align: center;
 }
 
+nav{
+    width: auto;
+    max-width: 500px;
+    background-color: salmon;
+    margin: 16px auto;
+}
+
+nav ul{
+    text-align: center;
+    padding: 0;
+}
+
+nav ul li{
+    display: inline-block;
+}
+
+nav ul li a{
+    text-decoration: none
+}
+
 article{
     width: auto;
     max-width: 600px;
@@ -53,4 +73,19 @@ p{
   .hide-me{
       list-style: none;
       height: 0
+  }
+
+  .overflow-hidden{
+    overflow: hidden;
+    height: 35px;
+  }
+
+  .overflow-visible{
+    overflow: visible;
+    height: 35px;
+  }
+  
+  .overflow-scroll{
+    overflow: scroll;
+    height: 75px;
   }

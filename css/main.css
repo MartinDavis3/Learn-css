@@ -35,6 +35,7 @@ nav{
     right: 0;
     bottom: auto;
     left: 0;
+    z-index: 1;
 }
 
 nav ul{
@@ -75,21 +76,34 @@ p{
 
 #float-practice {
     float: left;
-    margin-top 0;
+    margin-top: 0;
     margin-right: 16px;
     margin-bottom: 16px;
     margin-left: 0
     /* margin: 0 16px 16px 0; */
 }
 
-#z-index-practice {
+#z-index-practice-bear {
     display: block;
     position: absolute;
     top: 300px;
     right: 0;
     left: 0;
     margin: auto;
-    z-index: -1;
+    z-index: 0;  /* default z-index is 0, lower is behind, higher is in front.
+    However, there also appears to be a priority within any z-index based either on
+    positioning type or position within html, but not clear exactly what it is */
+    /* Some testing seems to show that absolute > static. Also for both absolute, first in html > later in html */
+}
+
+#z-index-practice-wolf {
+    display: block;
+    position: absolute;
+    top: 350px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    z-index: 0;  
 }
 
 /* Text meant only for screen readers. */

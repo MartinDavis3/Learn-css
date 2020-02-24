@@ -1,8 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Trade+Winds&display=swap');
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url('../fonts/jetbrains-mono/JetBrainsMono-Regular.ttf');
+    src:  url('../fonts/jetbrains-mono/JetBrainsMono-Regular.woff') format('woff'), /* this is for backwards compatibility to IE */
+     url('../fonts/jetbrains-mono/JetBrainsMono-Bold.ttf') format('truetype'),
+     url('../fonts/jetbrains-mono/JetBrains-Regular.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;  /* tells browser to use these for normal text */
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url('../fonts/jetbrains-mono/JetBrainsMono-Bold.ttf');
+    src: url('../fonts/jetbrains-mono/JetBrainsMono-Bold.ttf') format('truetype'); /* this is for backwards compatibility to IE */
+    font-weight: bold;
+    font-style: normal;  /* tells browser to use these for normal text */
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url('../fonts/jetbrains-mono/JetBrainsMono-Italic.ttf');
+    src: url('../fonts/jetbrains-mono/JetBrainsMono-Italic.ttf') format('truetype'); /* this is for backwards compatibility to IE */
+    font-weight: normal;
+    font-style: italic;  /* tells browser to use these for normal text */
+}
+
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url('../fonts/jetbrains-mono/JetBrainsMono-Bold-Italic.ttf');
+    src: url('../fonts/jetbrains-mono/JetBrainsMono-Bold-Italic.ttf') format('truetype'); /* this is for backwards compatibility to IE */
+    font-weight: bold;
+    font-style: italic;  /* tells browser to use these for normal text */
+}
+
 * {  /* basic browser reset */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-size: 16px
+}
+
+code {
+    white-space: pre;
+    font-family: 'JetBrains Mono', Consolas, monospace;
 }
 
 body {
@@ -13,16 +54,23 @@ body {
     background-attachment: fixed;   /* image does not scroll with content */
 }
 
-h1, h2{
+h1, h2, h4, h5, h6 {
     font-size: 46px;
     font-family: "Times New Roman", Georgia, serif;
     text-align: center;
     padding-top: 50px;
 }
 
+h1 {
+    font-family: 'Jetbrains Mono', Consolas, monospace;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 50px;
+}
+
 h2 {
+    font-family: 'Trade Winds', 'Comic Sans', cursive;
     font-size: 32px;
-    padding: 16px 0;
 }
 
 nav{

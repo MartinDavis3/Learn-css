@@ -240,9 +240,16 @@ p {
 
 #social-media-links > li {
     display: inline-block;
+    margin: 8px;  /* Observe! Margin collapse - the largest, when interacting, wins! */
 }
 
 #social-media-links .fab {
     color: rgba(50, 50, 50, 1);
     font-size: 32px;
+}
+
+#social-media-links a:hover .fab,
+#social-media-links a:focus .fab,
+#social-media-links a:active .fab {
+    color: rgba(50, 50, 50, 0.5)
 }

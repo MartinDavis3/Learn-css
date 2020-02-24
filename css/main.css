@@ -55,7 +55,7 @@ body {
 }
 
 h1, h2, h4, h5, h6 {
-    font-size: 46px;
+    font-size: 32px;
     font-family: "Times New Roman", Georgia, serif;
     text-align: center;
     padding-top: 50px;
@@ -70,7 +70,8 @@ h1 {
 
 h2 {
     font-family: 'Trade Winds', 'Comic Sans', cursive;
-    font-size: 32px;
+    text-align: left;
+    font-size: 26px;
 }
 
 nav{
@@ -252,4 +253,42 @@ p {
 #social-media-links a:focus .fab,
 #social-media-links a:active .fab {
     color: rgba(50, 50, 50, 0.5)
+}
+
+@media screen and (min-width: 500px) {
+    
+    body { background-color: red;
+    }
+
+    h1 {
+        font-size: 40px
+    }
+
+    h2 {
+        font-size: 30px
+    }
+
+    h3 {
+        font-size: 26px
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    body { background-color: green;
+    }
+
+    h1 {
+        font-size: 64px
+    }
+    
+    h2 {
+        font-size: 32px
+    }
+    
+    h3 {
+        font-size: 28px
+    }
+    
 }

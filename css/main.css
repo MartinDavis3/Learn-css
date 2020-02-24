@@ -86,27 +86,27 @@ nav{
     z-index: 1;
 }
 
-nav ul{
+nav ul {
     text-align: center;
     padding: 0;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;  /* Disable the underline */
     display: inline-block;
     padding: 16px 32px;
 }
 
-nav ul li a:hover, nav ul li a:focus, nav ul li a:active{
+nav ul li a:hover, nav ul li a:focus, nav ul li a:active {
     background-color: rgb(50,50,50);
     color:#fff;  /* this is actually &Hffffff. If only three characters are given, the other 3 are assumed to be the same */
 }
 
-article{
+article {
     width: auto;
     max-width: 600px;
     margin-left: auto; /* Margin left and right as auto will centre a BLOCK level element! */
@@ -114,7 +114,7 @@ article{
     padding: 16px;
 }
 
-p{
+p {
     font-family: helvetica, arial, sans-serif;
     font-size: 15px;
     line-height: 1.5;
@@ -166,9 +166,9 @@ p{
     position: absolute;
     width: 1px;
     word-wrap: normal !important;
-  }
+}
 
-  .screen-reader-text:focus {
+.screen-reader-text:focus {
     background-color: #eee;
     clip: auto !important;
     clip-path: none;
@@ -183,52 +183,66 @@ p{
     top: 5px;
     width: auto;
     z-index: 100000; /* Above WP toolbar. */
-  }
+}
 
-  .hide-me{
-      list-style: none;
-      height: 0
-  }
+.hide-me {
+    list-style: none;
+    height: 0
+}
 
-  .overflow-hidden{
+.overflow-hidden {
     overflow: hidden;
     height: 35px;
-  }
+}
 
-  .overflow-visible{
+.overflow-visible {
     overflow: visible;
     height: 35px;
-  }
+}
   
-  .overflow-scroll{
+.overflow-scroll {
     overflow: scroll;
     height: 75px;
-  }
+}
 
-  #background-bullets, #image-bullets {
-      list-style: none;
-      margin: 16px auto;
-      padding: 16px;
-  }
+#background-bullets, #image-bullets {
+    list-style: none;
+    margin: 16px auto;
+    padding: 16px;
+}
 
-  #background-bullets li {
-      background-image: url("../img/coin.jpg");
-      background-repeat: no-repeat;
-      background-size: 32px;
-      background-position: top left;
-      padding: 8px 8px 8px 64px;
-  }
+#background-bullets li {
+    background-image: url("../img/coin.jpg");
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-position: top left;
+    padding: 8px 8px 8px 64px;
+}
   
-  #image-bullets li{
-      position: relative;
-      padding: 8px 8px 8px 64px;
-  }
+#image-bullets li{
+    position: relative;
+    padding: 8px 8px 8px 64px;
+}
 
   /* Only do this if the image is important to the content! */
-  #image-bullets li img {
-      position: absolute;   /* This is absolute with respect to its parent, because the parent has been given position: relative; */
-      top: 0;
-      left: 0;
-      width: 32px;
-      height: 32px;
-  }
+#image-bullets li img {
+    position: absolute;   /* This is absolute with respect to its parent, because the parent has been given position: relative; */
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+}
+
+#social-media-links {
+    list-style: none;
+    text-align: center;
+}
+
+#social-media-links > li {
+    display: inline-block;
+}
+
+#social-media-links .fab {
+    color: rgba(50, 50, 50, 1);
+    font-size: 32px;
+}

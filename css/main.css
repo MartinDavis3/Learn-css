@@ -220,7 +220,7 @@ p {
     padding: 8px 8px 8px 64px;
 }
   
-#image-bullets li{
+#image-bullets li {
     position: relative;
     padding: 8px 8px 8px 64px;
 }
@@ -232,6 +232,45 @@ p {
     left: 0;
     width: 32px;
     height: 32px;
+}
+
+.gradient-bg {
+    height:300px;
+    opacity: 0.2;
+    margin-top: 50px;
+    /* Gradient generated at https://CSSGradient.io */
+    background: rgb(9,9,121);
+    background: linear-gradient(90deg, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    box-shadow: 32px 32px 0 0 rgba(0, 0, 0, 1);
+}
+
+.speech-bubble {
+    background-color: rgba( 255, 255, 255, 0.95 );
+    border-radius: 1.5em;
+    border-bottom-right-radius: 0;
+    max-width: 300px;
+    padding: 1.5em;
+    color: rgba(33, 33, 33, 1);
+    margin-top: 75px;
+    position: relative;
+}
+
+/* ::after - pseudo-element. Effectively creates an element that does not exits in html */
+/* This block creates a triangle by zeroing the size of some borders and making some parts
+of the resulting shape transparent, thus invisible */
+.speech-bubble::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: o;
+    box-sizing: content-box;
+    border-top: 0 solid transparent;
+    border-right: 32px solid rgba(255,255,255,0.95);
+    border-bottom: 32px solid transparent;
+    position: absolute;
+    top: 100%;
+    right: 0;
+
 }
 
 #social-media-links {

@@ -1,3 +1,3 @@
 # Learn-css
 Class exercise to learn css.
-Shows some various types of formatting that can be achieved using css.
+Trying out various commands for website styling in class in order to learn CSS.

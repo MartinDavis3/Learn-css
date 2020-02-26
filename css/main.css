@@ -314,6 +314,34 @@ of the resulting shape transparent, thus invisible */
     z-index: 2;
 }
 
+.transition-transform button {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    color: gray;
+    background-color: lavenderblush;
+    padding: 8px 16px;
+    border: 3px solid black;
+    margin: 32px;
+    cursor: pointer; /* Micky mouse hand! */
+    transition:
+        1s linear border,
+        0.3s ease-in padding,
+        0.5s ease-in-out background-color,
+        2s ease color,
+        4s ease font-size;
+
+}
+
+.transition-transform button:hover,
+.transition-transform button:focus,
+.transition-transform button:active {
+    color: lavenderblush;
+    font-size: 16px;
+    background-color: gray;
+    padding: 12px 20px;
+    border: 6px dotted indigo;
+}
+
 #bottom-space {
     height: 800px;
 }

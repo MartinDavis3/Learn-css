@@ -52,9 +52,9 @@
 @keyframes md-animation {
     0% { transform: rotateX( 0deg ); }
     25% { transform: rotateX( 90deg ); }
-    50% { transform: rotateY( 90deg ); }
-    75% {transform: rotateZ( 90deg ); }
-    100% {transform: rotateX( 90deg ); }
+    50% { transform: rotateX( 180deg ); }
+    75% {transform: rotateX( 270deg ); }
+    100% {transform: rotateX( 360deg ); }
 }
 
 * {  /* basic browser reset */
@@ -414,16 +414,23 @@ of the resulting shape transparent, thus invisible */
 }
 
 #md-keyframe-test {
-    width: 150px;
-    height: 150px;
+    font-size: 32px;
+    text-align: center;
+    width: 160px;
+    height: 160px;
     background-color: chocolate;
-    margin: 64px;
+    padding-top: 64px;
+    padding-bottom: 64px;
     /* Let's animate! */
     animation-name: md-animation; /* Call it by name! */
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-direction: normal;
     animation-timing-function: linear;
+}
+
+#md-keyframe-test p {
+    background-color: rgba(0, 0, 0, 0);
 }
 
 #bottom-space {

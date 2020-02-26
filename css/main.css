@@ -34,6 +34,29 @@
     font-style: italic;  /* tells browser to use these for normal text */
 }
 
+@keyframes my-animation {
+    0% { /* We get to define at which point in an animation changes occur! */
+        transform: scale( 1 ); /* What should change at this point in the animation. */
+    }
+    50% {
+        transform: scale( 1.2 );
+    }
+    75% {
+        transform: scale( 1.5 );
+    }
+    100% {
+        transform: scale( 1 );  
+    }
+}
+
+@keyframes md-animation {
+    0% { transform: rotateX( 0deg ); }
+    25% { transform: rotateX( 90deg ); }
+    50% { transform: rotateY( 90deg ); }
+    75% {transform: rotateZ( 90deg ); }
+    100% {transform: rotateX( 90deg ); }
+}
+
 * {  /* basic browser reset */
     box-sizing: border-box;
     margin: 0;
@@ -341,8 +364,18 @@ of the resulting shape transparent, thus invisible */
     padding: 12px 20px;
     border: 6px dotted indigo;
 }
+/* Need more on nth-child pseudo-selectors? https://css-tricks.com/useful-nth-child-recipies/ */
+.transition-transform button:nth-child(2) { /* We can select specific children! This can save us from ID or class-itus! Only use classes and id's where you need */
+    color: lightblue;
+    background-color: black;
+}
 
-/* Transform / hover example: */
+.transition-transform button:nth-child(3) {
+    color: lightpink;
+    background-color: darkgoldenrod;
+}
+
+    /* Transform / hover example: */
 
 .transition-transform div { 
     display: inline-block;
@@ -358,10 +391,39 @@ of the resulting shape transparent, thus invisible */
 }
 
 .transition-transform div:hover + div {  /* Now we're combining our pseuodo (state) selector for hover, and telling the FOLLOWING div how to behave! */
+    transform-origin: 10% 0 0;
     transform:
         translate( -100px, -50px)
         rotate( 35deg)              /* rotates about the centre of the block (in this case div) */
         scale( 2 );
+}
+
+/* Keyframe testing */
+#keyframe-test {
+    width: 150px;
+    height: 150px;
+    background-color: firebrick;
+    margin: 64px;
+    border-radius: 150px;
+    /* Let's animate! */
+    animation-name: my-animation; /* Call it by name! */
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+#md-keyframe-test {
+    width: 150px;
+    height: 150px;
+    background-color: chocolate;
+    margin: 64px;
+    /* Let's animate! */
+    animation-name: md-animation; /* Call it by name! */
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
 }
 
 #bottom-space {

@@ -84,7 +84,7 @@ nav{
     right: 0;
     bottom: auto;
     left: 0;
-    z-index: 1;
+    z-index: 4;
 }
 
 nav ul {
@@ -270,7 +270,37 @@ of the resulting shape transparent, thus invisible */
     position: absolute;
     top: 100%;
     right: 0;
+}
 
+.video-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-section > * {
+    position: relative;
+    z-index: 3;
+}
+
+.video-section p, .video-section h3 {
+    background: none;
+    padding: 10px;
+}
+
+.video-section video {
+    position: absolute;
+    /* top: 0; */
+    right: 0;
+    bottom: 0;
+    /* left: 0; */
+    width: 150%;
+    height: auto;
+    z-index: 1;
+    /* Note: using negative z can sometimes cause inconsitencies as things tend to go behind the default 0 layer */
+}
+
+#bottom-space {
+    height: 800px;
 }
 
 #social-media-links {

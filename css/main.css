@@ -342,6 +342,28 @@ of the resulting shape transparent, thus invisible */
     border: 6px dotted indigo;
 }
 
+/* Transform / hover example: */
+
+.transition-transform div { 
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: chartreuse;
+    transition: 1s ease transform;
+}
+
+.transition-transform div + div {    /* Find a div BESIDE a div... this is a "directly-followed-by" sibling selector. */
+    background-color: green;
+    pointer-events:  none; /* Disable hover/click etc for the element */
+    /* WARNING: Will affect your JavaScript and all mouse actions! */
+}
+
+.transition-transform div:hover + div {  /* Now we're combining our pseuodo (state) selector for hover, and telling the FOLLOWING div how to behave! */
+    transform:
+        translate( -100px, -50px)
+        rotate( 35deg)              /* rotates about the centre of the block (in this case div) */
+        scale( 2 );
+}
+
 #bottom-space {
     height: 800px;
 }

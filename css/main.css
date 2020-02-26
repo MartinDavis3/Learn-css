@@ -299,6 +299,21 @@ of the resulting shape transparent, thus invisible */
     /* Note: using negative z can sometimes cause inconsitencies as things tend to go behind the default 0 layer */
 }
 
+/* "Whiteout" overlay */
+.video-section::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    z-index: 2;
+}
+
 #bottom-space {
     height: 800px;
 }
